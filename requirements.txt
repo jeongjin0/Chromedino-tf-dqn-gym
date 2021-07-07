@@ -1,5 +1,5 @@
 numpy
 tensorflow
 gym
-gym_chrome_dino #see "mattstruble/gym-chrome-dino" for this
+gym_chrome_dino    #see "mattstruble/gym-chrome-dino" for this
 cv2
