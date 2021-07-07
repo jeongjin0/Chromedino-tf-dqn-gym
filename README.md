@@ -68,6 +68,6 @@ Agent strategy is to keep jumping without ducking and standing a grahp of score 
 
 
 
-<img src="https://user-images.githubusercontent.com/80797980/124690882-d7a2a580-df15-11eb-80aa-0d4f7ec1c9fd.png" width="300" height="230"> 
+<img src="https://user-images.githubusercontent.com/80797980/124690882-d7a2a580-df15-11eb-80aa-0d4f7ec1c9fd.png" width="300" height="190"> 
 
 
