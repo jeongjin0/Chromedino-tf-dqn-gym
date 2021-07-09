@@ -36,6 +36,7 @@ If Agent die, we give -10 reward to agent
 
 and if Agent survive we give 1 reward to agent
 
+
 ---
 
 ### RL algorithm
@@ -54,8 +55,8 @@ we update Q-function using Q-learning Algorithm
 
 we explorer by choosing random integer between 0~2
 
-and we exploit by choosing which position the largest values of the Q-function
-
+and we exploit by choosing which position the largest values of the Q-function  
+  
   
 ---
 ### Result
