@@ -1,72 +1,49 @@
 # Chromedino-tf-dqn-gym
 
-  
-
-We implementate DQN algorithm with image_pixel input
-
-We use [gym-chrome-dino](https://github.com/mattstruble/gym-chrome-dino) as a environment
 
 ---
+This project implements the DQN (Deep Q-Network) algorithm with image pixel input using the [gym-chrome-dino](https://github.com/mattstruble/gym-chrome-dino) environment. The goal is to train an agent to play the Chrome Dino game using reinforcement learning.
+
+<br>
 
 ### Preprocessing
 
   
 
-Gym provide image pixels as a state
+The gym environment provides image pixels as the state. To preprocess the input image, we use interpolation and edge detection techniques using the OpenCV (cv2) module. Since the agent operates in real-time, it is crucial for the preprocessing step to be fast. By reducing the input size of the image, we can speed up the preprocessing and ensure that the agent can make quick decisions based on the current game state.
+The image below shows an example of the preprocessing steps applied to the game screen:
 
-We use Interpolation and Edgedetection for preprocessing
+<img src="./file/Inter_area.png" width="400px" height="150px" title="inter_area"/>
 
-We use cv2 module for preprocessing
 
----
 
-### Action
+<img src="./file/Edge-Detector.png" width="400px" height="150px" title="edge_detector"/>
 
-  
-
-Agent can choose Three action (Jump, Duck, Stand)
 
 ---
 
-### Reward
+### Action Space
 
-  
+The agent can choose from three actions:
 
-If Agent die, we give -10 reward to agent
++ Jump
++ Duck
++ Stand
 
-and if Agent survive we give 1 reward to agent
+---
 
+### Reward System
+
+The reward system is designed to encourage the agent to survive longer in the game. The rewards are as follows:
+
++ -10 reward for agent death
+
++ +1 reward for each step of survival
 
 ---
 
 ### RL algorithm
 
   
-
-we use DQN algorithm using tensorflow
-
-agent explorer or exploit following Epsilon Greedy Algorithm
-
-  
-
-we update Q-function using Q-learning Algorithm
-
-  
-
-we explorer by choosing random integer between 0~2
-
-and we exploit by choosing which position the largest values of the Q-function  
-  
-  
----
-### Result
-
-  
-
-Agent fail to find optimal policy(which is jump at appropriate time)
-
-Agent strategy is to keep jumping without ducking and standing a grahp of score is shown
-
-
-
-<img src="https://user-images.githubusercontent.com/80797980/124690882-d7a2a580-df15-11eb-80aa-0d4f7ec1c9fd.png" width="300" height="190"> 
+We employ the DQN algorithm using TensorFlow to train the agent. The agent explores or exploits based on the Epsilon Greedy Algorithm. During exploration, the agent chooses a random action, while during exploitation, it selects the action with the highest Q-value.
+The Q-function is updated using the Q-learning algorithm, which helps the agent learn the optimal policy.
