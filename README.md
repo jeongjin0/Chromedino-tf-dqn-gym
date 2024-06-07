@@ -15,10 +15,11 @@ The image below shows an example of the preprocessing steps applied to the game 
 
 <img src="./file/Inter_area.png" width="400px" height="150px" title="inter_area"/>
 
-
+interpolation
 
 <img src="./file/Edge-Detector.png" width="400px" height="150px" title="edge_detector"/>
 
+canny edge detection
 
 ---
 
